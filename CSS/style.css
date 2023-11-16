@@ -1,0 +1,405 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Marine-blue: hsla(213, 96%, 18%, 0.9);
+--Purplish-blue: hsla(243, 100%, 62%, 1);
+--Pastel-blue: hsl(228, 100%, 84%);
+--Pastel-blue-step: hsla(189, 95%, 75%, 0.952);
+--Light-blue: hsla(206, 94%, 87%, 0.5);
+--Strawberry-red: hsl(354, 84%, 57%);
+
+/* Neutral */
+
+--Cool-gray: hsl(231, 11%, 63%);
+--Light-gray: hsl(229, 24%, 87%);
+--Magnolia: hsl(217, 100%, 97%);
+--Alabaster: hsl(231, 100%, 99%);
+--White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background: var(--Magnolia);
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+   width: 700px;
+}
+
+.content{
+    background: var(--White);
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* THE STEPS */
+
+.steps{
+    /* width: 30%; */
+    background: url('/images/bg-sidebar-desktop.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+   padding: 30px 30px 150px 10px;
+}
+
+.step{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    color: var(--Alabaster);
+}
+
+.step-1, .step-2, .step-3, .step-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border: 2px solid var(--Alabaster);
+    border-radius: 50%;
+    margin-right: 10px;
+    font-weight: 700;
+    transition: ease-in-out 1s;
+}
+
+.step-text{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.step-text span{
+    color: var(--Cool-gray);
+    font-weight: 400;
+}
+
+.active{
+    background: var(--Pastel-blue-step);
+    color: var(--Marine-blue);
+    border-color: var(--Pastel-blue-step);
+}
+
+/* THE SECOND PART */
+
+.outer-form{
+    width: 70%;
+    overflow: hidden;
+}
+
+.container .outer-form form{
+    width: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page{
+    /* margin: 0 70px; */
+    width: 20%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.inside-page{
+    margin: 0 60px;
+}
+
+/* THE INTRO */
+
+.intro{
+    margin-bottom: 20px;
+}
+
+.intro h1{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.intro p{
+    font-size: 14px;
+}
+
+/* THE FIRST INPUT */
+
+.label{
+    font-size: 13px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label{
+    font-weight: 700;
+}
+
+small{
+    color: var(--Strawberry-red);
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid var(--Light-gray);
+    outline: none;
+    margin: 5px 0 15px 0;
+}
+
+input:hover{
+    border: 1px solid var(--Purplish-blue);
+}
+
+/* THE BUTTONS */
+
+.field{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.firstField{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.next{
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--Marine-blue);
+    color: var(--White);
+}
+
+.next:hover{
+    background-color: var(--Purplish-blue);
+    cursor: pointer;
+}
+
+.prev{
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--Cool-gray);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.prev:hover{
+    color: var(--Marine-blue);
+
+}
+
+/* THE SECOND FORM */
+
+ .plans{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.plan{
+    border: 1px solid var(--Light-gray);
+    border-radius: 10px;
+    width: 32%;
+    padding: 10px 70px 30px 15px;
+    cursor: pointer;
+}
+
+.plan:hover{
+    border-color: var(--Purplish-blue);
+}
+
+.plan img{
+    margin-bottom: 40px;
+}
+
+.plan h3{
+    font-size: 16px;
+}
+
+.plan p{
+    font-size: 13px;
+}
+
+.toggle-plan{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    color: var(--Cool-gray);
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--Light-blue);
+    padding: 10px ;
+    border-radius: 8px;
+}
+
+.circle-bg{
+    width: 40px;
+    height: 20px;
+    background-color: var(--Marine-blue);
+    margin: 0 10px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--White);
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.3s;
+} 
+
+.active-text{
+  color: var(--Marine-blue);
+  font-weight: 700;
+}
+
+
+.active-plan{
+    background-color: var(--Light-blue);
+    border-color: var(--Purplish-blue);
+}
+/* THE THIRD INPUT */
+
+.add-ons{
+    border: 1px solid var(--Light-gray);
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.add-ons:hover{
+    border-color: var(--Purplish-blue);
+}
+
+.add-ons input{
+    width: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.add-ons label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    width: 100%;
+}
+
+.add-ons label p{
+    color: var(--Purplish-blue);
+}
+
+.add-ons label .add-ons-text p{
+    color: var(--Cool-gray);
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+
+/* THE SUMMARY PAGE */
+
+.summary{
+    background-color: var(--Light-blue);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.plan-summary{
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.plan-summary button{
+    background: none;
+    border: none;
+    color: var(--Marine-blue);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+hr{
+    border: 1px solid var(--Light-gray);
+}
+
+
+.oya-addon, .total{
+      display: flex;
+      justify-content: space-between;
+       margin-top: 10px;
+    font-size: 14px;
+    color: grey;
+}
+
+.total{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sum-total{
+    font-size: 17px;
+    color: var(--Purplish-blue);
+    font-weight: 700;
+}
+
+/* THE SUCCESS PAGE  */
+
+.success{
+     margin: 0 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+
+.success img{
+    margin-bottom: 15px;
+}
+
+.success p{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
+    color: var(--Cool-gray);
+}

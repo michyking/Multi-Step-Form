@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Step Form</title>
+
+    <!-- googgle fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css  -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="steps">
+          <div class="step">
+            <div class="step-1">1</div>
+            <div class="step-text">
+              <span>step 1</span>
+              <p>your info</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-2">2</div>
+            <div class="step-text">
+              <span>step 2</span>
+              <p>select plan</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-3">3</div>
+            <div class="step-text">
+              <span>step 3</span>
+              <p>add-ons</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-4">4</div>
+            <div class="step-text">
+              <span>step 4</span>
+              <p>summary</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- THE SECOND PART -->
+
+        <div class="outer-form">
+          <form action="">
+
+          <!-- THE FIRST FORM -->
+          <div class="page slide-page">
+            <div class="inside-page">
+
+              <div class="intro">
+                <h1>Personal info</h1>
+                <p>Please provide your name, email address, and phone number</p>
+              </div>
+              <div class="inputs">
+                <div class="input">
+                  <div class="label">
+                    <label for="name">Name</label>
+                    <small class="error1"></small>
+                  </div>
+                  <input type="text"  class="name" />
+                </div>
+                <div class="input">
+                  <div class="label">
+                    <label for="email">Email Address</label>
+                    <small class="error2"></small>
+                  </div>
+                  <input type="email" class="email"/>
+                </div>
+                <div class="input">
+                  <div class="label">
+                    <label for="email">Phone Number</label>
+                  <small class="error3"></small>
+                  </div>
+                  <input type="tel" class="phone"/>
+                </div>
+                 <div class="field firstField">
+                <button class="firstNext next">Next Step</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- THE SECOND FORM -->
+           <div class="page">
+            <div class="inside-page">
+
+              <div class="intro">
+                <h1>Select your plan</h1>
+                <p>You have the option of monthly or yearly billing.</p>
+              </div>
+              <div class="inputs">
+                <div class="plans">
+  
+                  <div class="plan">
+                    <img src="/images/icon-arcade.svg" alt="">
+                    <h3>Arcade</h3>
+                    <p>$<span class="amount1">9</span><span class="duration">/mo</span></p>
+                  </div>
+                  <div class="plan">
+                    <img src="/images/icon-advanced.svg" alt="">
+                    <h3>Advanced</h3>
+                    <p>$<span class="amount2">12</span><span class="duration">/mo</span></p>
+                  </div>
+                  <div class="plan">
+                    <img src="/images/icon-pro.svg" alt="">
+                    <h3>Pro</h3>
+                    <p>$<span class="amount3">15</span><span class="duration">/mo</span></p>
+                  </div>
+                  </div>
+                </div>
+                <div class="toggle-plan">
+                  <p id="monthly-text">monthly</p>
+                  <div class="circle-bg">
+                    <div class="circle"></div>
+                  </div>
+                  <p id="yearly-text">yearly</p>
+                </div>
+                 <div class="field btns">
+                <button class="prev-1 prev">Go Back</button>
+                <button class="next-1 next">Next Step</button>
+              </div>
+            </div>
+            </div>
+
+             <!-- THE THIRD FORM -->
+           <div class="page">
+            <div class="inside-page">
+
+              <div class="intro">
+                <h1>Pick add-ons</h1>
+                <p>Add-ons help enhance your gaming experience.</p>
+              </div>
+              <div class="inputs">
+                <div class="add-ons">
+                  <input type="checkbox" id="online-services" name="Online service" value="1">
+                  <label for="online service">
+                    <div class="add-ons-text">
+                      <h4>Online service</h4>
+                      <p>Access to multiplayer games</p>
+                    </div>
+                    <p>+$1/mo</p>
+                  </label>
+                </div>
+                <div class="add-ons">
+                   <input type="checkbox" id="larger-storage" name="Larger storage" value="2">
+                  <label for="Larger storage">
+                    <div class="add-ons-text">
+                      <h4>Larger storage</h4>
+                      <p>Extra 1TB of cloud save</p>
+                    </div>
+                    <p>+$2/mo</p>
+                  </label>
+                </div>
+                <div class="add-ons">
+                   <input type="checkbox" id="customizable" name="customizable" value="2">
+                  <label for="customizable">
+                    <div class="add-ons-text">
+                      <h4>Customizable profile</h4>
+                      <p>Custom theme on your profile</p>
+                    </div>
+                    <p>+$2/mo</p>
+                  </label>
+                </div>
+                </div>
+                 <div class="field btns">
+                <button class="prev-2 prev">Go Back</button>
+                <button class="next-2 next">Next Step</button>
+              </div>
+            </div>
+            </div>
+
+
+                <!-- THE SUMMARY FORM -->
+           <div class="page">
+            <div class="inside-page">
+
+              <div class="intro">
+                <h1>Finishing up</h1>
+                <p>Double-check everything looks OK before confirming.</p>
+              </div>
+                 <div class="inputs">
+                  <div class="summary">
+                    <div class="plan-summary">
+                      <div>
+                        <p class="summarized-plan">Pro</p>
+                        <button class="change">Change</button>
+                      </div>
+                      <div>
+                        <p>$ <span class="plan-price">600</span></p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="addons-summary">
+                        
+                    </div>
+                  </div>
+                  <div class="total">
+                    <p>Total</p>
+                    <p class="sum-total">768</p>
+                  </div>
+                </div>
+                 <div class="field btns">
+                <button class="prev-3 prev">Go Back</button>
+                <button class="confirm next">Confirm</button>
+              </div>
+            </div>
+            </div>
+
+
+                <!-- THE SUCCESS PAGE -->
+           <div class="page">
+            <div class="inside-page success">
+              <img src="/images/icon-thank-you.svg" alt="">
+              <h2>Thank You</h2>
+              <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+            </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="/JS/app.js"></script>
+  </body>
+</html>
