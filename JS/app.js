@@ -7,6 +7,7 @@ const yearlyText = document.querySelector("#yearly-text");
 
 const plans = document.querySelectorAll(".plan");
 const durations = document.querySelectorAll(".duration");
+const bonus = document.querySelectorAll(".bonus");
 const arcadeYearlyPrice = document.querySelector(".amount1");
 const advancedYearlyPrice = document.querySelector(".amount2");
 const proYearlyPrice = document.querySelector(".amount3");
@@ -42,6 +43,8 @@ const stepFour = document.querySelector(".step-4");
 const summarizedPlanName = document.querySelector(".summarized-plan");
 const summarizedPlanPrice = document.querySelector(".plan-price");
 const changeBtn = document.querySelector(".change");
+const planDuration = document.querySelector(".plan-duration");
+const totalDuration = document.querySelector(".total-duration");
 const sumTotal = document.querySelector(".sum-total");
 let addonsSummaryElement = document.querySelector(".addons-summary");
 
@@ -132,19 +135,26 @@ function updatePlanPrice() {
    const basePrice = monthlyPrices[selectedPlanKey];
 
    if (isToggled) {
-     planPrice = basePrice * 12;
+     planPrice = basePrice * 10;
    } else {
      planPrice = basePrice;
    }
 
   if (isToggled) {
-    arcadeYearlyPrice.textContent = monthlyPrices.Arcade * 12;
-    advancedYearlyPrice.textContent = monthlyPrices.Advanced * 12;
-    proYearlyPrice.textContent = monthlyPrices.Pro * 12;
+    arcadeYearlyPrice.textContent = monthlyPrices.Arcade * 10;
+    advancedYearlyPrice.textContent = monthlyPrices.Advanced * 10;
+    proYearlyPrice.textContent = monthlyPrices.Pro * 10;
 
     durations.forEach((duration) => {
       duration.textContent = "/yr";
     });
+
+    bonus.forEach((element)=>{
+      element.textContent = "2 months free";
+    })
+
+    planDuration.textContent = "(yearly)";
+    totalDuration.textContent = "(per year)";
   } else {
     arcadeYearlyPrice.textContent = monthlyPrices.Arcade;
     advancedYearlyPrice.textContent = monthlyPrices.Advanced;
@@ -153,6 +163,13 @@ function updatePlanPrice() {
     durations.forEach((duration) => {
       duration.textContent = "/mo";
     });
+
+    bonus.forEach((element) => {
+      element.textContent = "";
+    });
+    planDuration.textContent = "(monthly)";
+    totalDuration.textContent = "(per month)";
+
   }
   summaryPage(); // Update the summary page
 }

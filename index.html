@@ -69,21 +69,21 @@
                     <label for="name">Name</label>
                     <small class="error1"></small>
                   </div>
-                  <input type="text"  class="name" />
+                  <input type="text"  class="name" placeholder="e.g. Michael Onyeabo"/>
                 </div>
                 <div class="input">
                   <div class="label">
                     <label for="email">Email Address</label>
                     <small class="error2"></small>
                   </div>
-                  <input type="email" class="email"/>
+                  <input type="email" class="email" placeholder="e.g. michaelonyeabo@lorem.com"/>
                 </div>
                 <div class="input">
                   <div class="label">
                     <label for="email">Phone Number</label>
                   <small class="error3"></small>
                   </div>
-                  <input type="tel" class="phone"/>
+                  <input type="tel" class="phone" placeholder="e.g. +2348131046626"/>
                 </div>
                  <div class="field firstField">
                 <button class="firstNext next">Next Step</button>
@@ -107,16 +107,19 @@
                     <img src="/images/icon-arcade.svg" alt="">
                     <h3>Arcade</h3>
                     <p>$<span class="amount1">9</span><span class="duration">/mo</span></p>
+                    <p class="bonus"></p>
                   </div>
                   <div class="plan">
                     <img src="/images/icon-advanced.svg" alt="">
                     <h3>Advanced</h3>
                     <p>$<span class="amount2">12</span><span class="duration">/mo</span></p>
+                    <p class="bonus"></p>
                   </div>
                   <div class="plan">
                     <img src="/images/icon-pro.svg" alt="">
                     <h3>Pro</h3>
                     <p>$<span class="amount3">15</span><span class="duration">/mo</span></p>
+                    <p class="bonus"></p>
                   </div>
                   </div>
                 </div>
@@ -194,11 +197,14 @@
                   <div class="summary">
                     <div class="plan-summary">
                       <div>
-                        <p class="summarized-plan">Pro</p>
+                        <div class="tellthem">
+
+                          <p class="summarized-plan"></p><span class="plan-duration"></span>
+                        </div>
                         <button class="change">Change</button>
                       </div>
                       <div>
-                        <p>$ <span class="plan-price">600</span></p>
+                        <p>$<span class="plan-price"></span><span class="duration">/mo</span></p>
                       </div>
                     </div>
                     <hr>
@@ -207,8 +213,11 @@
                     </div>
                   </div>
                   <div class="total">
-                    <p>Total</p>
-                    <p class="sum-total">768</p>
+                    <p>Total <span class="total-duration"></span></p>
+                    <div class="tellthem">
+                      <p class="tot"><span class="sum-total"></span><span class="duration">/mo</span></p>
+                      
+                    </div>
                   </div>
                 </div>
                  <div class="field btns">

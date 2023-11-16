@@ -224,7 +224,7 @@ input:hover{
     border: 1px solid var(--Light-gray);
     border-radius: 10px;
     width: 32%;
-    padding: 10px 70px 30px 15px;
+    padding: 10px 10px 30px 15px;
     cursor: pointer;
 }
 
@@ -242,6 +242,13 @@ input:hover{
 
 .plan p{
     font-size: 13px;
+}
+
+.bonus{
+    color: var(--Marine-blue);
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 5px
 }
 
 .toggle-plan{
@@ -377,10 +384,23 @@ hr{
     justify-content: space-between;
 }
 
-.sum-total{
+.tot{
     font-size: 17px;
     color: var(--Purplish-blue);
     font-weight: 700;
+}
+
+.plan-duration{
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--Cool-gray);
+    margin-left: 5px;
+}
+
+.tellthem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* THE SUCCESS PAGE  */
