@@ -7,6 +7,9 @@ const yearlyText = document.querySelector("#yearly-text");
 
 const plans = document.querySelectorAll(".plan");
 const durations = document.querySelectorAll(".duration");
+const addonPrice = document.querySelectorAll(".addon-price");
+const addonPrice1 = document.querySelector(".addon-price1");
+const itsDurations = document.querySelectorAll(".its-duration");
 const bonus = document.querySelectorAll(".bonus");
 const arcadeYearlyPrice = document.querySelector(".amount1");
 const advancedYearlyPrice = document.querySelector(".amount2");
@@ -153,6 +156,20 @@ function updatePlanPrice() {
       element.textContent = "2 months free";
     })
 
+    // CHANGING THE ADDONS PRICES 
+
+    addonPrice.forEach((element)=>{
+      element.textContent = 2 *10;
+    })
+
+    addonPrice1.textContent = 1 * 10;
+
+     itsDurations.forEach((duration) => {
+       duration.textContent = "/yr";
+     });
+
+    //  PLAN DURATION ON THE SUMMARY PAGE
+
     planDuration.textContent = "(yearly)";
     totalDuration.textContent = "(per year)";
   } else {
@@ -167,9 +184,23 @@ function updatePlanPrice() {
     bonus.forEach((element) => {
       element.textContent = "";
     });
+
+    //FOR THE ADDONS PRICE
+
+    addonPrice.forEach((element) => {
+      element.textContent = 2;
+    });
+
+    addonPrice1.textContent = 1;
+
+    itsDurations.forEach((duration) => {
+      duration.textContent = "/mo";
+    });
+
+    //  PLAN DURATION ON THE SUMMARY PAGE
+
     planDuration.textContent = "(monthly)";
     totalDuration.textContent = "(per month)";
-
   }
   summaryPage(); // Update the summary page
 }
@@ -206,11 +237,19 @@ function storeAddOns(){
   checkboxes.forEach((checkbox) => {
 
     if (checkbox.checked) {
-      selectedAddOns.push(checkbox.value);
-      addonsName.push(checkbox.name);
+      if (isToggled) {
+        selectedAddOns.push(checkbox.value * 10);
+        addonsName.push(checkbox.name);
+      }else{
+        selectedAddOns.push(checkbox.value);
+        addonsName.push(checkbox.name);
+      }
     }
+
+
   });
 
+  
   summaryPage();
 }
 
@@ -246,9 +285,20 @@ function summaryPage(){
     addonsSummaryElement.innerHTML += `
       <div class ="oya-addon">
           <p>${addonName}</p>
-          <p>+$<span>${addon}</span></p>
+          <p>+$<span>${addon}</span><span class="addon-duration">/mo</span></p>
       </div>
       `;
+
+      const durations = document.querySelectorAll(".addon-duration");
+      if(isToggled){
+          durations.forEach((duration) => {
+            duration.textContent = "/yr";
+          });
+      }else{
+         durations.forEach((duration) => {
+           duration.textContent = "/mo";
+         });
+      }
 
       totalAddOns += parseInt(addon);
 

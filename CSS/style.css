@@ -464,7 +464,7 @@ hr{
         background-color: var(--White);
         padding: 40px 20px;
         border-radius: 10px;
-        height: 500px;
+        min-height: 550px;
     }
 
     .outer-form{
@@ -477,6 +477,20 @@ hr{
 @media screen and (max-width: 500px){
     .outer-form{
         width: 110%;
+    }
+
+    .plans{
+        flex-direction: column;
+    }
+
+    .plan{
+        width: 100%;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .plan img {
+        margin-bottom: 10px;
     }
 }
   
